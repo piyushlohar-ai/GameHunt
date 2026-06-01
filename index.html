@@ -1,1 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameHunt</title>
+    <link rel="stylesheet" href="style.css">
 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Sidebar -->
+
+    <div class="sidebar">
+
+        <div class="logo">
+            ⚡ GAMEHUNT
+        </div>
+
+        <ul class="menu">
+
+            <li class="active">🏠 Home</li>
+
+            <li>🔥 Trending</li>
+
+            <li>🎮 All Games</li>
+
+            <li>🚗 Racing</li>
+
+            <li>⚔️ Action</li>
+
+            <li>🧩 Puzzle</li>
+
+            <li>⚽ Sports</li>
+
+            <li>👻 Horror</li>
+
+        </ul>
+
+    </div>
+
+    <!-- Main Content -->
+
+    <div class="main-content">
+
+        <!-- Top Navbar -->
+
+        <div class="topbar">
+
+            <div class="search-box">
+
+                <input type="text" placeholder="Search games...">
+
+            </div>
+
+            <button class="login-btn">
+
+                Login
+
+            </button>
+
+        </div>
+
+        <!-- Hero Section Placeholder -->
+
+        <div class="hero-placeholder">
+
+            <h1>Welcome to GameHunt</h1>
+
+            <p>Play Instantly. No Downloads. No Limits.</p>
+
+        </div>
+
+    </div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+
+
+
+<section class="trending">
+    <h2>🔥 Trending Games</h2>
+
+    <div class="games-grid">
+
+        <div class="game-card"
+onclick="openGame('games/void-striker.html')">
+            <img src="assets/game-thumbnails/void-striker.png" alt="Void Striker">
+            <h3>Void Striker</h3>
+            <p>Space Shooter</p>
+    </div>
+
+        <div class="game-card"
+onclick="openGame('games/flappy-bird-pro.html')">
+            <img src="assets/game-thumbnails/flappy-bird.png" alt="Flappy Bird">
+            <h3>Flappy Bird Pro</h3>
+            <p>Arcade Game</p>
+</div>
+<div id="game-container" style="display:none;">
+
+    <button id="back-btn" onclick="closeGame()">
+        ← Back to GameHunt
+    </button>
+
+    <iframe id="game-frame"></iframe>
+
+</div>
+    </div>
+</section>
+
+<div id="game-container" style="display:none;">
+
+    <button id="back-btn" onclick="closeGame()">
+        ← Back to GameHunt
+    </button>
+
+    <iframe id="game-frame"></iframe>
+
+</div>

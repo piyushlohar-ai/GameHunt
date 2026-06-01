@@ -1,0 +1,316 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#12131f;
+    color:white;
+}
+
+/* Sidebar */
+
+.sidebar{
+    position:fixed;
+    left:0;
+    top:0;
+    width:250px;
+    height:100vh;
+    background:#1a1c2e;
+    border-right:1px solid rgba(255,255,255,0.05);
+}
+
+.logo{
+    padding:25px;
+    font-size:24px;
+    font-weight:700;
+    color:#8b5cf6;
+    text-align:center;
+}
+
+.menu{
+    list-style:none;
+    margin-top:20px;
+}
+
+.menu li{
+    padding:18px 25px;
+    cursor:pointer;
+    transition:.3s;
+    color:#b8bdd8;
+}
+
+.menu li:hover{
+    background:#252844;
+    color:white;
+}
+
+.active{
+    background:#252844;
+    color:white !important;
+}
+
+/* Main Content */
+
+.main-content{
+    margin-left:250px;
+    min-height:100vh;
+}
+
+/* Top Bar */
+
+.topbar{
+    height:80px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 40px;
+    background:#1a1c2e;
+}
+
+.search-box{
+    width:500px;
+}
+
+.search-box input{
+    width:100%;
+    height:50px;
+    border:none;
+    outline:none;
+    border-radius:15px;
+    padding:0 20px;
+    background:#252844;
+    color:white;
+    font-size:16px;
+}
+
+.login-btn{
+    border:none;
+    padding:12px 25px;
+    border-radius:12px;
+    cursor:pointer;
+    background:linear-gradient(
+        135deg,
+        #4f7cff,
+        #8b5cf6
+    );
+    color:white;
+    font-weight:600;
+}
+
+/* Hero Placeholder */
+
+.hero-placeholder{
+    margin:40px;
+    height:300px;
+    border-radius:25px;
+    background:linear-gradient(
+        135deg,
+        #4f7cff,
+        #8b5cf6
+    );
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero-placeholder h1{
+    font-size:48px;
+    margin-bottom:10px;
+}
+
+.hero-placeholder p{
+    font-size:20px;
+}
+
+.trending{
+    padding:40px;
+}
+
+.trending h2{
+    margin-bottom:20px;
+    font-size:28px;
+}
+
+.games-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.game-card{
+    background:#252844;
+    border-radius:20px;
+    overflow:hidden;
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+
+.game-card:hover{
+    transform:translateY(-8px);
+}
+
+.game-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    object-position:center;
+    display:block;
+}
+
+
+.game-card h3{
+    padding:15px 15px 5px;
+}
+
+.game-card p{
+    padding:0 15px 15px;
+    color:#b8bdd8;
+}
+
+
+
+
+
+.back-btn{
+    position:absolute;
+    top:15px;
+    left:15px;
+    padding:10px 15px;
+    border:none;
+    border-radius:10px;
+    background:#6c63ff;
+    color:white;
+    cursor:pointer;
+}
+
+
+
+
+.trending{
+    padding:40px;
+    margin-left:20px;
+}
+
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 768px){
+
+    .sidebar{
+        width:70px;
+    }
+
+    .sidebar .logo{
+        font-size:18px;
+    }
+
+    .sidebar ul li span{
+        display:none;
+    }
+
+    .main-content{
+        margin-left:70px;
+    }
+
+    .topbar{
+        flex-direction:column;
+        gap:15px;
+        padding:15px;
+    }
+
+    .search-bar{
+        width:100%;
+    }
+
+    .hero{
+        padding:30px 20px;
+    }
+
+    .hero h1{
+        font-size:32px;
+    }
+
+    .games-grid{
+        grid-template-columns:1fr;
+    }
+
+    .game-card img{
+        height:200px;
+    }
+}
+
+#game-container{
+    width:100%;
+    padding:20px;
+}
+
+#game-frame{
+    width:100%;
+    height:900px;
+    border:none;
+    border-radius:15px;
+}
+
+#back-btn{
+    background:#6c63ff;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:10px;
+    cursor:pointer;
+    margin-bottom:15px;
+}
+
+#game-container{
+    display:none;
+    width:100%;
+    padding:20px;
+}
+
+#game-container{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:#050816;
+    z-index:9999;
+    display:none;
+}
+
+#game-frame{
+    width:100%;
+    height:100%;
+    border:none;
+}
+
+#back-btn{
+    position:absolute;
+    top:15px;
+    left:15px;
+    z-index:10000;
+
+    padding:12px 20px;
+    border:none;
+    border-radius:10px;
+
+    background:#6c63ff;
+    color:white;
+    cursor:pointer;
+}
+
+#back-btn{
+    padding:12px 20px;
+    background:#6c63ff;
+    color:white;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    margin-bottom:15px;
+}
